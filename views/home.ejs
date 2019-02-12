@@ -1,0 +1,34 @@
+<script src="https://cdn.shopify.com/s/assets/external/app.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap-theme.min.css" integrity="sha384-jzngWsPS6op3fgRCDTESqrEJwRKck+CILhJVO5VvaAZCq8JYf8HsR/HPpBOOPZfR" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha384-vhJnz1OVIdLktyixHY4Uk3OHEwdQqPppqYR8+5mjsauETgLOcEynD9oPHhhz18Nw" crossorigin="anonymous"></script>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= shop_name %>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <h2>Hello <%= shop_owner %></h2>
+  <br>
+  <table class = "table table-striped">
+    <thead class="thead=inverse">
+      <th>Order</th>
+      <th>Message</th>
+    </thead>
+    <tbody>
+      <% for(order in ordersList){ %>
+        <tr>
+        <td><%= ordersList[order].verb %></td>
+        <td><%= ordersList[order].message %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
